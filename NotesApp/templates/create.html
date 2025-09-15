@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Note</h1>
+        <form method="POST">
+            <input type="text" name="title" placeholder="Note Title" required>
+            <textarea name="content" placeholder="Note Content" required></textarea>
+            <input type="submit" value="Create">
+        </form>
+        <a href="/" class="back-link">Back to Notes</a>
+    </div>
+</body>
+</html>

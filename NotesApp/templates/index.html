@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>My Notes</h1>
+        <a href="/create" class="create-link">Create New Note</a>
+        <ul>
+            {% for note in notes %}
+            <li class="note-item">
+                <strong>{{ note[1] }}</strong>
+                <div class="note-actions">
+                    <a href="/view/{{ note[0] }}">View</a> |
+                    <a href="/edit/{{ note[0] }}">Edit</a> |
+                    <a href="/delete/{{ note[0] }}">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

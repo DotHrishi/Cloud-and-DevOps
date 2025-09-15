@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ note[1] }}</h1>
+        <div class="note-content">
+            <p>{{ note[2] }}</p>
+        </div>
+        <a href="/" class="back-link">Back to Notes</a>
+    </div>
+</body>
+</html>
